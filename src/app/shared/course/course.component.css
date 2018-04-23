@@ -1,0 +1,36 @@
+ /* Course CSS */
+
+.banner img {
+    width: 100%;
+}
+
+.box {
+    margin: 0px 10px 10px 0px;
+    -webkit-box-shadow: 1px 1px 4px 1px rgba(148,148,148,0.25);
+    -moz-box-shadow: 1px 1px 4px 1px rgba(148,148,148,0.25);
+    box-shadow: 1px 1px 4px 1px rgba(148,148,148,0.25);
+    flex: 20%;
+}
+
+.box h4 {
+    font-size: 18px;
+    height: 8vh;
+}
+
+.box h6 {
+    font-size: 15px;
+    font-style: italic;
+}
+
+.box p {
+    font-size: 14px;
+}
+
+.detail {
+    padding: 15px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}

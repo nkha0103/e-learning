@@ -1,0 +1,21 @@
+/* List Course CSS */
+
+.list-course {
+    padding-top: 20px;
+}
+
+.title-course {
+    margin: 10px 0px 5px 0px;
+    font-size: 20px;
+}
+
+.course-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 25%;
+    padding: 0px 0px 25px 0px;
+}   
+

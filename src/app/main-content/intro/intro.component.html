@@ -1,0 +1,53 @@
+<!-- Banner -->
+
+<app-banner [bannerpath]='bannerpath'>
+    <h1>{{title}}</h1>
+    <p>{{stitle}}</p>
+    <button type="button" class="btn btn-success">Join in</button>
+</app-banner>
+
+<!-- Banner End -->
+
+<!-- List course -->
+
+<div class="list-course">
+    <div class="container">
+        <div class="head-course">
+            <h2 class="title-course">Front-End</h2>
+        </div>
+        <!-- slider courses  -->
+
+        <div class="owl-carousel owl-theme">
+            <app-course class="item" *ngFor='let course of frontends' [course]='course'>
+
+            </app-course>
+        </div>
+
+        <!-- slider courses  -->
+    </div>
+</div>
+
+<!-- List Course End -->
+
+<!-- List course -->
+
+<div class="list-course">
+    <div class="container">
+        <div class="head-course">
+            <h2 class="title-course">Back-End</h2>
+        </div>
+
+        <!-- slider courses  -->
+
+        <div class="owl-carousel owl-theme">
+            <app-course class="item" *ngFor='let course of backends' [course]='course'>
+
+            </app-course>
+        </div>
+
+        <!-- slider courses  -->
+
+    </div>
+</div>
+
+<!-- List Course End -->

@@ -1,0 +1,25 @@
+<!-- Banner -->
+
+<app-banner [bannerpath]='bannerpath'>
+  <h1>{{title}}</h1>
+  <p>{{stitle}}</p>
+</app-banner>
+
+<!-- Banner End -->
+
+<!-- List Course  -->
+
+<div class="list-course">
+  <div class="container">
+    <div class="head-course">
+      <h2 class="title-course">{{title}}</h2>
+    </div>
+    <div class="course-grid">
+      <app-course class="item col-12 col-sm-6 col-md-4 col-lg-3" *ngFor='let course of catecourses' [course]='course'>
+
+      </app-course>
+    </div>
+  </div>
+</div>
+
+<!-- List Course End -->
