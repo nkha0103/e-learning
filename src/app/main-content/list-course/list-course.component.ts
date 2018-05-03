@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseService } from '../../providers/course.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-list-course',
@@ -13,7 +14,7 @@ export class ListCourseComponent implements OnInit {
   pageid = '';
   bannerpath = '';
 
-  constructor(private _courseService: CourseService, ) { }
+  constructor(private _courseService: CourseService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     // Get course //
@@ -24,22 +25,18 @@ export class ListCourseComponent implements OnInit {
     console.log(this.courses);
 
     // Get pageid //
-    this.getPageid();
+    this.activatedRoute.params.subscribe(params => {
+      this.pageid = params['courseName'];
 
-    // Filter course by cate //
-    this.filterCourse();
+      // tittle course //
+      this.title = this.pageid;
 
-    // Get Banner Path //
-    this.getBannerPath();
-  }
+      // Filter course by cate //
+      this.filterCourse();
 
-  // Get pageid //
-  getPageid() {
-    this.pageid = location.pathname.toString().slice(1);
-    console.log(this.pageid);
-
-    // tittle course //
-    this.title = this.pageid;
+      // Get Banner Path //
+      this.getBannerPath();
+    });
   }
 
   // Filter course by cate//

@@ -20,6 +20,7 @@ export class CourseService {
         'rating': '4',
         'duration': '20 min',
         'cate': 'front-end',
+        'cpath': 'what-is-html',
       },
       {
         'bannerurl': '../../../assets/images/course-banner/css.jpg',
@@ -28,6 +29,7 @@ export class CourseService {
         'rating': '5',
         'duration': '40 min',
         'cate': 'front-end',
+        'cpath': 'what-is-css',
       },
       {
         'bannerurl': '../../../assets/images/course-banner/angular.jpg',
@@ -36,6 +38,7 @@ export class CourseService {
         'rating': '5',
         'duration': '45 Hours',
         'cate': 'front-end',
+        'cpath': 'what-is-angular',
       },
       {
         'bannerurl': '../../../assets/images/course-banner/html.jpg',
@@ -44,6 +47,7 @@ export class CourseService {
         'rating': '4',
         'duration': '20 min',
         'cate': 'front-end',
+        'cpath': 'what-is-html',
       },
       {
         'bannerurl': '../../../assets/images/course-banner/css.jpg',
@@ -52,6 +56,7 @@ export class CourseService {
         'rating': '5',
         'duration': '40 min',
         'cate': 'front-end',
+        'cpath': 'what-is-css',
       },
       {
         'bannerurl': '../../../assets/images/course-banner/angular.jpg',
@@ -60,6 +65,7 @@ export class CourseService {
         'rating': '5',
         'duration': '45 Hours',
         'cate': 'front-end',
+        'cpath': 'what-is-angular',
       },
       {
         'bannerurl': '../../../assets/images/course-banner/html.jpg',
@@ -68,6 +74,7 @@ export class CourseService {
         'rating': '4',
         'duration': '20 min',
         'cate': 'front-end',
+        'cpath': 'what-is-html',
       },
       {
         'bannerurl': '../../../assets/images/course-banner/css.jpg',
@@ -76,6 +83,7 @@ export class CourseService {
         'rating': '5',
         'duration': '40 min',
         'cate': 'front-end',
+        'cpath': 'what-is-css',
       },
       {
         'bannerurl': '../../../assets/images/course-banner/angular.jpg',
@@ -84,6 +92,7 @@ export class CourseService {
         'rating': '5',
         'duration': '45 Hours',
         'cate': 'front-end',
+        'cpath': 'what-is-angular',
       },
       {
         'bannerurl': '../../../assets/images/course-banner/nodejs.jpg',
@@ -92,6 +101,7 @@ export class CourseService {
         'rating': '5',
         'duration': '50 Hours',
         'cate': 'back-end',
+        'cpath': 'what-is-nodejs',
       },
       {
         'bannerurl': '../../../assets/images/course-banner/csharp.jpg',
@@ -100,6 +110,7 @@ export class CourseService {
         'rating': '5',
         'duration': '70 Hours',
         'cate': 'back-end',
+        'cpath': 'what-is-c#',
       },
       {
         'bannerurl': '../../../assets/images/course-banner/java.jpg',
@@ -108,6 +119,7 @@ export class CourseService {
         'rating': '5',
         'duration': '60 Hours',
         'cate': 'back-end',
+        'cpath': 'what-is-java',
       },
       {
         'bannerurl': '../../../assets/images/course-banner/php.jpg',
@@ -116,6 +128,7 @@ export class CourseService {
         'rating': '5',
         'duration': '60 Hours',
         'cate': 'back-end',
+        'cpath': 'what-is-php',
       },
       {
         'bannerurl': '../../../assets/images/course-banner/asp.jpg',
@@ -124,6 +137,7 @@ export class CourseService {
         'rating': '5',
         'duration': '60 Hours',
         'cate': 'back-end',
+        'cpath': 'what-is-asp',
       },
     ];
     this._courses.next(coursedata);

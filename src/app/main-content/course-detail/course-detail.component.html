@@ -1,3 +1,69 @@
-<p>
-  course-detail works!
-</p>
+<!-- Course Header -->
+<div class="header jumbotron">
+  <div class="course-header container animated fadeInLeftBig">
+    <!-- Course banner -->
+    <div class="banner">
+      <img src="../../../assets/images/course-banner/angular.jpg" alt="hmtl">
+    </div>
+    <!-- Course banner end -->
+    <div class="info">
+      <h1 class="title">Test Course Title</h1>
+      <h4 class="stitle">Test course sub title</h4>
+      <div class="course-info">
+        <div class="teacher">
+          Test course teacher
+        </div>
+        <div class="cate">Test Cate</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Course Header End -->
+
+<!-- Course Body -->
+
+<section class="body animated bounceInRight">
+  <div class="course-detail container">
+    <div class="main-content">
+
+      <!-- Media Player -->
+
+      <div class="vplayer">
+        <iframe width="800" height="500" src="https://www.youtube.com/embed/viHILXVY_eU" frameborder="0" allow="autoplay; encrypted-media"
+          allowfullscreen></iframe>
+      </div>
+
+      <!-- Media Player End -->
+
+      <div class="course-description">
+        <h3>Course Description</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, reprehenderit? Iste vitae quia tenetur eos asperiores
+          neque eius. Magni autem inventore esse, corporis tenetur quis rem ut vero ex provident!</p>
+        <h3>Why study this course</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, tenetur? Aperiam ex cumque ipsa soluta earum consequatur
+          dolore saepe? Aut itaque alias iure quisquam cum officia cumque debitis, ullam quas.</p>
+      </div>
+      <div class="course-lesson">
+        <div class="course-lesson-header">
+          <h6>Course Title</h6>
+        </div>
+        <ul class="course-lessons-list">
+          <li>
+            <a [routerLink]="['lesson-1']">lesson 1</a>
+          </li>
+          <li>
+            <a [routerLink]="['lesson-2']">lesson 2</a>
+          </li>
+          <li>
+            <a [routerLink]="['lesson-3']">lesson 3</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="sidebar">
+      sidebar
+    </div>
+  </div>
+</section>
+
+<!-- Course Body End -->

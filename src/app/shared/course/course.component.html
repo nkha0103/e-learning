@@ -1,16 +1,20 @@
-<div class="box">
-    <div class="banner">
-        <img src={{course.bannerurl}} alt="hmtl">
-    </div>
-    <div class="detail">
-        <h4 class="name">{{course.name}}</h4>
-        <h6 class="title">{{course.title}}</h6>
-        <!-- <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p> -->
-        <div class="footer">
-            <div class="rating">
-                <i class="far fa-star"></i> {{course.rating}}</div>
-            <div class="duration">
-                <i class="far fa-clock"></i> {{course.duration}}</div>
+<div class="animated fadeInLeftBig">
+    <div class="box hvr-float-shadow">
+        <div class="banner">
+            <img src={{course.bannerurl}} alt="hmtl">
+        </div>
+        <div class="detail">
+            <a [routerLink]="['',course.cate ,course.cpath]">
+                <h4 class="name">{{course.name}}</h4>
+            </a>
+            <h6 class="title">{{course.title}}</h6>
+            <!-- <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p> -->
+            <div class="footer">
+                <div class="rating">
+                    <i class="far fa-star"></i> {{course.rating}}</div>
+                <div class="duration">
+                    <i class="far fa-clock"></i> {{course.duration}}</div>
+            </div>
         </div>
     </div>
 </div>
