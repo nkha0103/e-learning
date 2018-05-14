@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
 
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
@@ -14,6 +17,9 @@ import { SharedModule } from './shared/shared.module';
 
 // Services here //
 import { CourseService } from './providers/course.service';
+import { LessonService } from './providers/lesson.service';
+import { HttpClientModule } from '@angular/common/http';
+import { environment } from '../environments/environment';
 
 
 
@@ -29,8 +35,12 @@ import { CourseService } from './providers/course.service';
     RouterModule.forRoot(appRoutes),
     LayoutModule,
     SharedModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+
   ],
-  providers: [ CourseService ],
+  providers: [CourseService, LessonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

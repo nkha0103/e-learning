@@ -59,19 +59,51 @@ export class IntroComponent implements OnInit {
     // Get course //
     this._courseService.courses.subscribe(newcourse => {
       this.courses = newcourse;
+      console.log(this.courses);
     });
-    this._courseService.getCourses();
-    console.log(this.courses);
+    this._courseService.getCourses().then(() => {
+      console.log('cai nay log sau');
+      // Get front end courses //
+      this.frontends = this.filterCourse('front-end');
+      console.log('front-end courses after filter');
+      console.log(this.frontends);
 
-    // Get front end courses //
-    this.frontends = this.filterCourse('front-end');
-    console.log('front-end courses after filter');
-    console.log(this.frontends);
+      // Get back end courses //
+      this.backends = this.filterCourse('back-end');
+      console.log('back-end courses after filter');
+      console.log(this.backends);
 
-    // Get back end courses //
-    this.backends = this.filterCourse('back-end');
-    console.log('back-end courses after filter');
-    console.log(this.backends);
+      setTimeout(() => {
+        if ($('.owl-carousel').length) {
+          $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            responsive: {
+              0: {
+                items: 1
+              },
+              600: {
+                items: 3
+              },
+              1000: {
+                items: 5
+              }
+            }
+          });
+        }
+      }, 0);
+    });
+
+    // // Get front end courses //
+    // this.frontends = this.filterCourse('front-end');
+    // console.log('front-end courses after filter');
+    // console.log(this.frontends);
+
+    // // Get back end courses //
+    // this.backends = this.filterCourse('back-end');
+    // console.log('back-end courses after filter');
+    // console.log(this.backends);
 
   }
 
@@ -85,24 +117,26 @@ export class IntroComponent implements OnInit {
 
   // tslint:disable-next-line:use-life-cycle-interface
   ngAfterViewInit() {
-    if ($('.owl-carousel').length) {
-      $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: false,
-        responsive: {
-          0: {
-            items: 1
-          },
-          600: {
-            items: 3
-          },
-          1000: {
-            items: 5
-          }
-        }
-      });
-    }
+    // setTimeout(() => {
+    //   if ($('.owl-carousel').length) {
+    //     $('.owl-carousel').owlCarousel({
+    //       loop: true,
+    //       margin: 10,
+    //       nav: false,
+    //       responsive: {
+    //         0: {
+    //           items: 1
+    //         },
+    //         600: {
+    //           items: 3
+    //         },
+    //         1000: {
+    //           items: 5
+    //         }
+    //       }
+    //     });
+    //   }
+    // }, 1000);
   }
 }
 

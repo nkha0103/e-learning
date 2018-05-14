@@ -3,17 +3,17 @@
   <div class="course-header container animated fadeInLeftBig">
     <!-- Course banner -->
     <div class="banner">
-      <img src="../../../assets/images/course-banner/angular.jpg" alt="hmtl">
+      <img src={{detailcourse[0]?.bannerurl}} alt="hmtl">
     </div>
     <!-- Course banner end -->
     <div class="info">
-      <h1 class="title">Test Course Title</h1>
-      <h4 class="stitle">Test course sub title</h4>
+      <h1 class="title">{{detailcourse[0]?.name}}</h1>
+      <h4 class="stitle">{{detailcourse[0]?.title}}</h4>
       <div class="course-info">
         <div class="teacher">
           Test course teacher
         </div>
-        <div class="cate">Test Cate</div>
+        <div class="cate">Category: {{detailcourse[0]?.cate}}</div>
       </div>
     </div>
   </div>
@@ -27,10 +27,16 @@
     <div class="main-content">
 
       <!-- Media Player -->
-
-      <div class="vplayer">
-        <iframe width="800" height="500" src="https://www.youtube.com/embed/viHILXVY_eU" frameborder="0" allow="autoplay; encrypted-media"
+      <!-- Intro video of current course  -->
+      <div class="vplayer" *ngIf="introvideo">
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/viHILXVY_eU" frameborder="0" allow="autoplay; encrypted-media"
           allowfullscreen></iframe>
+      </div>
+
+      <!-- lesson video  -->
+      <div class="vplayer lesson-video plyr__video-embed" id="player" *ngIf="!introvideo">
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+          allowfullscreen allowtransparency allow="autoplay"></iframe>
       </div>
 
       <!-- Media Player End -->
@@ -45,17 +51,12 @@
       </div>
       <div class="course-lesson">
         <div class="course-lesson-header">
-          <h6>Course Title</h6>
+          <h6>{{detailcourse[0]?.title}}</h6>
+          <h6>test current lesson data {{crlesson[0]?.name}}</h6>
         </div>
         <ul class="course-lessons-list">
-          <li>
-            <a [routerLink]="['lesson-1']">lesson 1</a>
-          </li>
-          <li>
-            <a [routerLink]="['lesson-2']">lesson 2</a>
-          </li>
-          <li>
-            <a [routerLink]="['lesson-3']">lesson 3</a>
+          <li *ngFor='let lesson of courselessons'>
+            <a [routerLink]="['', coursecate, courseid, lesson.lpath]">{{lesson.name}}</a>
           </li>
         </ul>
       </div>

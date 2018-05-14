@@ -21,22 +21,23 @@ export class ListCourseComponent implements OnInit {
     this._courseService.courses.subscribe(newcourse => {
       this.courses = newcourse;
     });
-    this._courseService.getCourses();
-    console.log(this.courses);
+    this._courseService.getCourses().then(() => {
+      console.log('log cai nay sau');
+      // Get pageid //
+      this.activatedRoute.params.subscribe(params => {
+        this.pageid = params['courseName'];
 
-    // Get pageid //
-    this.activatedRoute.params.subscribe(params => {
-      this.pageid = params['courseName'];
+        // tittle course //
+        this.title = this.pageid;
 
-      // tittle course //
-      this.title = this.pageid;
+        // Filter course by cate //
+        this.filterCourse();
 
-      // Filter course by cate //
-      this.filterCourse();
-
-      // Get Banner Path //
-      this.getBannerPath();
+        // Get Banner Path //
+        this.getBannerPath();
+      });
     });
+    console.log(this.courses);
   }
 
   // Filter course by cate//
