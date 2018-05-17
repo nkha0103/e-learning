@@ -8,6 +8,28 @@
 
 <!-- Banner End -->
 
+
+<!-- slick  -->
+
+<!-- <ngx-slick class="carousel" [config]="slideConfig">
+	<app-course ngxSlickItem class="item" *ngFor='let course of frontends' [course]='course'>
+
+	</app-course>
+</ngx-slick> -->
+
+<!-- slick  -->
+
+<!-- slick  -->
+
+<!-- <ngx-slick class="carousel" [config]="slideConfig">
+	<app-course ngxSlickItem class="item" *ngFor='let course of backends' [course]='course'>
+
+	</app-course>
+</ngx-slick> -->
+
+<!-- slick  -->
+
+
 <!-- List course -->
 
 <div class="list-course">
@@ -17,11 +39,21 @@
         </div>
         <!-- slider courses  -->
 
-        <div class="owl-carousel owl-theme">
-            <app-course class="item" *ngFor='let course of frontends' [course]='course'>
+        <!-- <div class="owl-carousel owl-theme">
+			<app-course class="item" *ngFor='let course of frontends' [course]='course'>
+
+			</app-course>
+		</div> -->
+
+        <!-- slick  -->
+
+        <ngx-slick class="carousel" [config]="slideConfig">
+            <app-course ngxSlickItem class="item" *ngFor='let course of frontends' [course]='course'>
 
             </app-course>
-        </div>
+        </ngx-slick>
+
+        <!-- slick  -->
 
         <!-- slider courses  -->
     </div>
@@ -39,11 +71,22 @@
 
         <!-- slider courses  -->
 
-        <div class="owl-carousel owl-theme">
-            <app-course class="item" *ngFor='let course of backends' [course]='course'>
+        <!-- <div class="owl-carousel owl-theme">
+			<app-course class="item" *ngFor='let course of backends' [course]='course'>
+
+			</app-course>
+		</div> -->
+
+
+        <!-- slick  -->
+
+        <ngx-slick class="carousel" [config]="slideConfig">
+            <app-course ngxSlickItem class="item" *ngFor='let course of backends' [course]='course'>
 
             </app-course>
-        </div>
+        </ngx-slick>
+
+        <!-- slick  -->
 
         <!-- slider courses  -->
 

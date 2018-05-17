@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseService } from '../../providers/course.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-course',
@@ -14,7 +14,11 @@ export class ListCourseComponent implements OnInit {
   pageid = '';
   bannerpath = '';
 
-  constructor(private _courseService: CourseService, private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private _courseService: CourseService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
     // Get course //
@@ -22,7 +26,7 @@ export class ListCourseComponent implements OnInit {
       this.courses = newcourse;
     });
     this._courseService.getCourses().then(() => {
-      console.log('log cai nay sau');
+      // console.log('log cai nay sau');
       // Get pageid //
       this.activatedRoute.params.subscribe(params => {
         this.pageid = params['courseName'];
@@ -33,11 +37,14 @@ export class ListCourseComponent implements OnInit {
         // Filter course by cate //
         this.filterCourse();
 
+        // Check data exist - if not => redirect //
+        this.isDataExist();
+
         // Get Banner Path //
         this.getBannerPath();
       });
     });
-    console.log(this.courses);
+    // console.log(this.courses);
   }
 
   // Filter course by cate//
@@ -46,12 +53,20 @@ export class ListCourseComponent implements OnInit {
     this.catecourses = this.courses.filter((course) => {
       return course.cate === cateid;
     });
-    console.log('courses after filter');
-    console.log(this.catecourses);
+    // console.log('courses after filter');
+    // console.log(this.catecourses);
   }
 
   // Get Banner Path //
   getBannerPath() {
     this.bannerpath = '../../../assets/images/bg-banner/' + this.pageid + '.jpg';
+  }
+
+  // Check data exist - if not => redirect //
+
+  isDataExist() {
+    if (this.catecourses.length === 0) {
+      this.router.navigate(['home']);
+    }
   }
 }

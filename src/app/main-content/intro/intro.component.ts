@@ -18,40 +18,6 @@ export class IntroComponent implements OnInit {
   frontends: any[];
   backends: any[];
 
-  // courses: any[] = [
-  //   {
-  //     'bannerurl': '../../../assets/images/course-banner/html.jpg',
-  //     'name': 'HTML: Hypertext Markup Language',
-  //     'title': 'What is HTML ?',
-  //     'rating': '4',
-  //     'duration': '20 min',
-  //     'cate': 'front-end',
-  //   },
-  //   {
-  //     'bannerurl': '../../../assets/images/course-banner/css.jpg',
-  //     'name': 'CSS: Cascading Style Sheets',
-  //     'title': 'What is CSS ?',
-  //     'rating': '5',
-  //     'duration': '40 min',
-  //     'cate': 'front-end',
-  //   },
-  //   {
-  //     'bannerurl': '../../../assets/images/course-banner/html.jpg',
-  //     'name': 'HTML: Hypertext Markup Language',
-  //     'title': 'What is HTML ?',
-  //     'rating': '4',
-  //     'duration': '20 min',
-  //     'cate': 'front-end',
-  //   },
-  //   {
-  //     'bannerurl': '../../../assets/images/course-banner/css.jpg',
-  //     'name': 'CSS: Cascading Style Sheets',
-  //     'title': 'What is CSS ?',
-  //     'rating': '5',
-  //     'duration': '40 min',
-  //     'cate': 'front-end',
-  //   },
-  // ];
   constructor(private _courseService: CourseService, private _filteredcourses: CourseService) { }
 
   ngOnInit() {
@@ -59,52 +25,20 @@ export class IntroComponent implements OnInit {
     // Get course //
     this._courseService.courses.subscribe(newcourse => {
       this.courses = newcourse;
-      console.log(this.courses);
+      // console.log(this.courses);
     });
     this._courseService.getCourses().then(() => {
-      console.log('cai nay log sau');
+      // console.log('cai nay log sau');
       // Get front end courses //
       this.frontends = this.filterCourse('front-end');
-      console.log('front-end courses after filter');
-      console.log(this.frontends);
+      // console.log('front-end courses after filter');
+      // console.log(this.frontends);
 
       // Get back end courses //
       this.backends = this.filterCourse('back-end');
-      console.log('back-end courses after filter');
-      console.log(this.backends);
-
-      setTimeout(() => {
-        if ($('.owl-carousel').length) {
-          $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: false,
-            responsive: {
-              0: {
-                items: 1
-              },
-              600: {
-                items: 3
-              },
-              1000: {
-                items: 5
-              }
-            }
-          });
-        }
-      }, 0);
+      // console.log('back-end courses after filter');
+      // console.log(this.backends);
     });
-
-    // // Get front end courses //
-    // this.frontends = this.filterCourse('front-end');
-    // console.log('front-end courses after filter');
-    // console.log(this.frontends);
-
-    // // Get back end courses //
-    // this.backends = this.filterCourse('back-end');
-    // console.log('back-end courses after filter');
-    // console.log(this.backends);
-
   }
 
   // Filter course by cate//
@@ -115,28 +49,65 @@ export class IntroComponent implements OnInit {
     return catecourses;
   }
 
+
+  // tslint:disable-next-line:member-ordering
+  slideConfig = {
+    'slidesToShow': 5,
+    'slidesToScroll': 1,
+    'autoplay': true,
+    'infinite': true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  };
+
   // tslint:disable-next-line:use-life-cycle-interface
   ngAfterViewInit() {
-    // setTimeout(() => {
-    //   if ($('.owl-carousel').length) {
-    //     $('.owl-carousel').owlCarousel({
-    //       loop: true,
-    //       margin: 10,
-    //       nav: false,
-    //       responsive: {
-    //         0: {
-    //           items: 1
-    //         },
-    //         600: {
-    //           items: 3
-    //         },
-    //         1000: {
-    //           items: 5
-    //         }
-    //       }
-    //     });
-    //   }
-    // }, 1000);
+    setTimeout(() => {
+      if ($('.owl-carousel').length) {
+        $('.owl-carousel').owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: false,
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 3
+            },
+            1000: {
+              items: 5
+            }
+          }
+        });
+      }
+    }, 500);
   }
 }
 

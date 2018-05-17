@@ -22,7 +22,7 @@ export class CourseService {
     return new Promise((resovle, reject) => {
       this.http.get('https://kha-e-learning.firebaseio.com/courses/.json').toPromise()
         .then((res: any[]) => {
-          console.log('log cai nay truoc');
+          // console.log('log cai nay truoc');
           this._courses.next(res);
         }).then((abc) => {
           resovle();

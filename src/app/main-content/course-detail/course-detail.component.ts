@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CourseService } from '../../providers/course.service';
 import { LessonService } from '../../providers/lesson.service';
 
@@ -11,9 +11,9 @@ import { LessonService } from '../../providers/lesson.service';
 export class CourseDetailComponent implements OnInit {
   courses: any[]; // all courses //
   lessons: any[]; // all lessons //
-  detailcourse = [];
+  detailcourse = []; // data(detail) of current course //
   courselessons = []; // lessons of current course //
-  crlesson = []; // current lesson //
+  crlesson = []; // data of current lesson //
   courseid = ''; // ID or Name of current course get from param //
   coursecate = ''; // Category of current course //
   lessonid = ''; // lesson path of current lesson //
@@ -23,6 +23,7 @@ export class CourseDetailComponent implements OnInit {
     private _courseService: CourseService,
     private activatedRoute: ActivatedRoute,
     private _lessonService: LessonService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -31,36 +32,46 @@ export class CourseDetailComponent implements OnInit {
       this.courses = newcourse;
     });
     this._courseService.getCourses().then(() => {
-      console.log('log cai nay sau');
+      // console.log('log cai nay sau');
 
       // Get lessons //
       this._lessonService.lessons.subscribe(newlesson => {
         this.lessons = newlesson;
       });
-      this._lessonService.getLessons();
-      console.log(this.lessons);
+      this._lessonService.getLessons().then(() => {
 
-      // Get courseid - coursecate - lesson //
-      this.activatedRoute.params.subscribe(params => {
-        this.courseid = params['courseDetail'];
-        this.coursecate = params['courseName'];
-        this.lessonid = params['courseLesson'];
-        console.log(this.coursecate);
-        console.log(this.courseid);
-        console.log(this.lessonid);
+        // Get courseid - coursecate - lesson //
+        this.activatedRoute.params.subscribe(params => {
+          this.courseid = params['courseDetail'];
+          this.coursecate = params['courseName'];
+          this.lessonid = params['courseLesson'];
+          // console.log(this.coursecate);
+          // console.log(this.courseid);
+          // console.log(this.lessonid);
 
-        // Filter lesson by cpath - cpath = courseid //
-        this.filterLesson();
+          // Filter detail course by cpath = courseid //
+          this.filterCourse();
 
-        // Get current lesson //
-        this.currentLesson();
+          // Check detail course exist - if not then navigate to home or not found//
+
+          this.isDetailCourseExist();
+
+          // Filter lesson by cpath - cpath = courseid //
+          this.filterLesson();
+
+          // Get current lesson //
+          this.currentLesson();
+
+          // Check lesson course exist - if not then navigate to home or not found //
+          this.isLessonExist();
+        });
+        // console.log(this.lessons);
+
+
+        // Hide Intro Video when go to the lesson //
+        this.check();
+
       });
-
-      // Filter detail course by cpath = courseid //
-      this.filterCourse();
-
-      // Hide Intro Video when go to the lesson //
-      this.check();
 
     });
     // console.log(this.courses);
@@ -88,7 +99,7 @@ export class CourseDetailComponent implements OnInit {
     this.courselessons = this.lessons.filter((lesson) => {
       return lesson.cpath === id;
     });
-    console.log(this.courselessons);
+    // console.log(this.courselessons);
   }
 
   // Get current lesson //
@@ -97,7 +108,7 @@ export class CourseDetailComponent implements OnInit {
     this.crlesson = this.courselessons.filter((lesson) => {
       return lesson.lpath === id;
     });
-    console.log(this.crlesson);
+    // console.log(this.crlesson);
   }
 
   // Hide Intro Video when go to the lesson //
@@ -107,4 +118,21 @@ export class CourseDetailComponent implements OnInit {
     }
   }
 
+  // Check data exist - if not => redirect //
+
+  isDetailCourseExist() {
+    if (this.detailcourse.length === 0) {
+      this.router.navigate(['home']);
+    }
+  }
+
+  isLessonExist() {
+    if (this.crlesson.length === 0 && this.lessonid === undefined) {
+      // console.log('intro lesson');
+    } if (this.crlesson.length === 0 && this.lessonid !== undefined) {
+      // console.log('khong co lesson nay');
+      this.router.navigate(['home']);
+    }
+  }
 }
+
