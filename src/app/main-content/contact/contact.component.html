@@ -1,8 +1,31 @@
 <!-- Banner -->
 
 <app-banner [bannerpath]='bannerpath'>
-    <h1>{{title}}</h1>
-      <p>{{stitle}}</p>
+  <h1>{{title}}</h1>
+  <p>{{stitle}}</p>
 </app-banner>
 
 <!-- Banner End -->
+
+<!-- Contact Body -->
+
+<div class="container animated slideInLeft">
+  <div class="box">
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+      <form>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Contact Body End -->

@@ -23,6 +23,7 @@ export const appRoutes: Routes = [
         path: ':courseName/:courseDetail', component: CourseDetailComponent
     },
     {
-        path: ':courseName/:courseDetail/:courseLesson', component: CourseDetailComponent
+        path: ':courseName/:courseDetail/:courseLesson', component: CourseDetailComponent,
+        runGuardsAndResolvers: 'always',
     },
 ];

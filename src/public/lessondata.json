@@ -1,44 +1,44 @@
 [
     {
         "name": "lesson 1",
-        "videourl": " ",
+        "lvid": "html-lesson-1.mp4?alt=media&token=dd9a8af9-2d02-430e-a231-a1577a2c82db",
         "lpath": "lesson-1",
         "cpath": "what-is-html"
     },
     {
         "name": "lesson 2",
-        "videourl": " ",
+        "lvid": "html-lesson-2.mp4?alt=media&token=868cdb58-617e-4106-9ddd-0652e1dcff88",
         "lpath": "lesson-2",
         "cpath": "what-is-html"
     },
     {
         "name": "lesson 3",
-        "videourl": " ",
+        "lvid": "html-lesson-3.mp4?alt=media&token=ac22bd51-d2c3-4e6e-b4ef-006b87b55826",
         "lpath": "lesson-3",
-        "cpath": "what-is-html"
-    },
-    {
-        "name": "lesson 4",
-        "videourl": " ",
-        "lpath": "lesson-4",
         "cpath": "what-is-html"
     },
     {
         "name": "lesson 1",
-        "videourl": " ",
+        "lvid": "css-lesson-1.mp4?alt=media&token=41a31ffd-1fac-4f6f-8afe-9369b3be076d",
         "lpath": "lesson-1",
         "cpath": "what-is-css"
     },
     {
         "name": "lesson 2",
-        "videourl": " ",
+        "lvid": "css-lesson-2.mp4?alt=media&token=95bda0a7-adb8-4ce2-a4fd-31bec8c66433",
         "lpath": "lesson-2",
         "cpath": "what-is-css"
     },
     {
-        "name": "lesson 3",
-        "videourl": " ",
-        "lpath": "lesson-3",
-        "cpath": "what-is-css"
+        "name": "lesson 1",
+        "lvid": "lesson-intro-lesson-1.mp4?alt=media&token=49aae0fb-b8e2-4a28-9c3f-19f5e233fe29",
+        "lpath": "lesson-1",
+        "cpath": "what-is-javascript"
+    },
+    {
+        "name": "lesson 2",
+        "lvid": "lesson-intro-lesson-2.mp4?alt=media&token=84d17674-9721-40fb-9c50-d8533a715ad0",
+        "lpath": "lesson-2",
+        "cpath": "what-is-javascript"
     }
 ]

@@ -1,6 +1,7 @@
 [
     {
         "bannerurl": "../../../assets/images/course-banner/html.jpg",
+        "cvid": "what-is-html.mp4?alt=media&token=167b3c90-fcf6-4c3c-9757-ff103d700022",
         "name": "HTML: Hypertext Markup Language",
         "title": "What is HTML ?",
         "rating": "4",
@@ -10,6 +11,7 @@
     },
     {
         "bannerurl": "../../../assets/images/course-banner/css.jpg",
+        "cvid": "what-is-css.mp4?alt=media&token=babeecc5-6bca-4945-b8a4-690af753383f",
         "name": "CSS: Cascading Style Sheets",
         "title": "What is CSS ?",
         "rating": "5",
@@ -19,6 +21,7 @@
     },
     {
         "bannerurl": "../../../assets/images/course-banner/javascript.jpg",
+        "cvid": "what-is-js.mp4?alt=media&token=ef9c0d33-e9a4-44cc-af1e-58aed3690b5a",
         "name": "Javascript: Learn to Program JS",
         "title": "What is Javascript ?",
         "rating": "5",
@@ -28,6 +31,7 @@
     },
     {
         "bannerurl": "../../../assets/images/course-banner/angular.jpg",
+        "cvid": "course-intro.mp4?alt=media&token=3979d4ea-efbf-46b9-a498-c4b05b30d61c",
         "name": "Angular: By Google",
         "title": "What is Angular ?",
         "rating": "5",
@@ -37,6 +41,7 @@
     },
     {
         "bannerurl": "../../../assets/images/course-banner/bootstrap.jpg",
+        "cvid": "course-intro.mp4?alt=media&token=3979d4ea-efbf-46b9-a498-c4b05b30d61c",
         "name": "Bootstrap: Powerfull CSS Framework",
         "title": "What is Bootstrap ?",
         "rating": "5",
@@ -46,6 +51,7 @@
     },
     {
         "bannerurl": "../../../assets/images/course-banner/react.jpg",
+        "cvid": "course-intro.mp4?alt=media&token=3979d4ea-efbf-46b9-a498-c4b05b30d61c",
         "name": "React: The Most Popular Front End Framework",
         "title": "What is React ?",
         "rating": "5",
@@ -55,6 +61,7 @@
     },
     {
         "bannerurl": "../../../assets/images/course-banner/vue.jpg",
+        "cvid": "course-intro.mp4?alt=media&token=3979d4ea-efbf-46b9-a498-c4b05b30d61c",
         "name": "Vue.js: Build an App With Vue.js",
         "title": "What is Vue.js ?",
         "rating": "5",
@@ -64,6 +71,7 @@
     },
     {
         "bannerurl": "../../../assets/images/course-banner/nodejs.jpg",
+        "cvid": "what-is-nodejs.mp4?alt=media&token=f77fd616-9af1-4bb0-a9d5-b7bfabfdbb61",
         "name": "NodeJS: JS Back-end",
         "title": "What is NodeJS ?",
         "rating": "5",
@@ -73,6 +81,7 @@
     },
     {
         "bannerurl": "../../../assets/images/course-banner/csharp.jpg",
+        "cvid": "course-intro.mp4?alt=media&token=3979d4ea-efbf-46b9-a498-c4b05b30d61c",
         "name": "C#: Powerfull languge",
         "title": "What is C# ?",
         "rating": "5",
@@ -82,6 +91,7 @@
     },
     {
         "bannerurl": "../../../assets/images/course-banner/java.jpg",
+        "cvid": "course-intro.mp4?alt=media&token=3979d4ea-efbf-46b9-a498-c4b05b30d61c",
         "name": "Java: By Oracle",
         "title": "What is Java ?",
         "rating": "5",
@@ -91,6 +101,7 @@
     },
     {
         "bannerurl": "../../../assets/images/course-banner/php.jpg",
+        "cvid": "course-intro.mp4?alt=media&token=3979d4ea-efbf-46b9-a498-c4b05b30d61c",
         "name": "PHP: Popular web backend language",
         "title": "What is PHP ?",
         "rating": "5",
@@ -100,6 +111,7 @@
     },
     {
         "bannerurl": "../../../assets/images/course-banner/ruby.jpg",
+        "cvid": "course-intro.mp4?alt=media&token=3979d4ea-efbf-46b9-a498-c4b05b30d61c",
         "name": "Ruby On Rails: Blink Blink",
         "title": "What is ROR ?",
         "rating": "5",
@@ -109,6 +121,7 @@
     },
     {
         "bannerurl": "../../../assets/images/course-banner/python.jpg",
+        "cvid": "course-intro.mp4?alt=media&token=3979d4ea-efbf-46b9-a498-c4b05b30d61c",
         "name": "Python: Hello, World!",
         "title": "What is Python ?",
         "rating": "5",
@@ -118,6 +131,7 @@
     },
     {
         "bannerurl": "../../../assets/images/course-banner/asp.jpg",
+        "cvid": "course-intro.mp4?alt=media&token=3979d4ea-efbf-46b9-a498-c4b05b30d61c",
         "name": "Asp.net: By Microsoft",
         "title": "What is asp.net ?",
         "rating": "5",

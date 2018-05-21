@@ -20,6 +20,7 @@ import { CourseService } from './providers/course.service';
 import { LessonService } from './providers/lesson.service';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from '../environments/environment';
+import { SafePipe } from './pipes/safe.pipe';
 
 
 
@@ -28,11 +29,12 @@ import { environment } from '../environments/environment';
     AppComponent,
     ListCourseComponent,
     CourseDetailComponent,
-    ContactComponent
+    ContactComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {onSameUrlNavigation: 'reload'}),
     LayoutModule,
     SharedModule,
     HttpClientModule,

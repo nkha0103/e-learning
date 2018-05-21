@@ -1,3 +1,13 @@
+/* Banner CSS */
+
+h1 {
+    display: block;
+}
+
+h1::first-letter {
+    text-transform: uppercase;
+}
+
 /* List Course CSS */
 
 .list-course {
@@ -7,15 +17,21 @@
 .title-course {
     margin: 10px 0px 5px 0px;
     font-size: 20px;
+    display: block;
+}
+
+.title-course::first-letter {
+    text-transform: uppercase;
 }
 
 .course-grid {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 10px;
 }
 
 .item {
     width: 25%;
-    padding: 0px 5px 25px 5px;
+    padding: 0px 5px 25px 0px;
 }   
 
